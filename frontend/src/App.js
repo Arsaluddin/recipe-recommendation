@@ -43,7 +43,10 @@ const [query,setQuery] = useState('');
         </form>
         
           { recipe && recipe.map((data,i) => (
+           
             <div key={i}>
+              
+              <img src={data.img}/>
               <h3>{data.title}</h3>
               <h4>{data.calories}</h4>
             </div>
