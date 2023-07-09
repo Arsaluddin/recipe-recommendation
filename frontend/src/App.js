@@ -46,8 +46,8 @@ const [query,setQuery] = useState('');
            
             <div key={i}>
               
-              <img src={data.img}/>
-              <h3>{data.title}</h3>
+              <img src={data.image}/>
+              <h5><h4>Recipe name</h4> {data.title}</h5>
               <h4>{data.calories}</h4>
             </div>
           ))}

@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
           id: hit.recipe.uri,
           title: hit.recipe.label,
           calories: hit.recipe.calories,
-          image: hit.recipe.image+'',
+          image: hit.recipe.image,
         }));
         // console.log(recipes[0].image)
         // res.json(recipes[0]);
