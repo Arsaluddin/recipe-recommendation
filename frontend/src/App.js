@@ -37,18 +37,19 @@ const [query,setQuery] = useState('');
     <div className="App">
       <h1>Recipe Recommandation</h1>
         <form onSubmit={handleSubmit}>
-          <label>ingridients</label>
+          <label><h3>Enter the main ingridients</h3></label>
           <input type='text' value={query} onChange={(e) => setQuery(e.target.value)}></input>
-          <button type='submit'>Submit</button>
+          <button type='submit'>Get Recipe</button>
         </form>
         
           { recipe && recipe.map((data,i) => (
            
-            <div key={i}>
+            <div className='Recipe' key={i}>
               
               <img src={data.image}/>
-              <h5><h4>Recipe name</h4> {data.title}</h5>
-              <h4>{data.calories}</h4>
+              
+              <h5> Recipe Name : {data.title}</h5>
+              <h4>Calories : {data.calories} Kcal</h4>
             </div>
           ))}
         
