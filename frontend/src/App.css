@@ -62,13 +62,20 @@ body {
   margin-bottom: 10px;
 }
 
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+}
+
 .recipe-title {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 8px;
+  line-height: 1.2;
 }
 
 .recipe-calories {
-  font-size: 16px;
+  font-size: 18px;
+  color: #007bff;
 }
 
 /* Responsive Styles */
