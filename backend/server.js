@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     // const { q } = req.query; // Search query from the frontend (optional)
     const { q } = req.query; 
     // Make a request to the Edamam API
-    axios.get('https://api.edamam.com/search', {
+    axios.get(process.env.Api_url , {
       params: {
         q: q || 'recipe', // Use the search query if provided, otherwise default to 'recipe'
         app_id: process.env.app_id,
