@@ -3,6 +3,8 @@ const body = require('body-parser');
 const axios = require('axios');
 const EdamamApiClient = require('edamam-api');
 const cors = require('cors');
+const dotenv = require('dotenv')
+dotenv.config()
 
 
 const app = express();
@@ -19,8 +21,8 @@ app.get('/', (req, res) => {
     axios.get('https://api.edamam.com/search', {
       params: {
         q: q || 'recipe', // Use the search query if provided, otherwise default to 'recipe'
-        app_id: '948beb25',
-        app_key: 'f08715f706df82289cad8488e53129f7',
+        app_id: process.env.app_id,
+        app_key: process.env.app_key,
       },
     })
       .then(response => {
